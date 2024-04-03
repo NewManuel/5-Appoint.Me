@@ -65,41 +65,51 @@ $(function () {
  
   // $(".btn").on("click", function () { ... }): This attaches a click event listener to all elements with the class .btn. When any of these elements are clicked, the function inside the event listener is executed.
   $(".btn").on("click", function () {
-    var idSpecificHr = $(this).closest("div").attr("id");
+    var timeSpecific = $(this).closest("div").attr("id");
 
     // var textEntry = $(this).siblings("textarea").val();: This retrieves the value of the textarea element that is a sibling of the clicked button.
     var textEntry = $(this).siblings("textarea").val();
 
     // localStorage stores the hour and text-value in text area.
-    localStorage.setItem(idSpecificHr, textEntry);
+    localStorage.setItem(timeSpecific, textEntry);
   });
 
-  // To get the current hour no need to import because in js because it was imported in the html
+  // This retrieves the current hour using the dayjs() library.
   var currentHour = dayjs().hour();
-  // Gets the number from the id to check against the current time to then set the classes for the time blocks.
-  $(".time-block").each(function () {
-    var blockHour = parseInt($(this).attr("id").split("-")[1]);
+  
+  // This iterates over each element(id) with the class .time-block and applies a function (checks with the current time, then sets the class for each time block) to it.
 
-    if (blockHour < currentHour) {
+  $(".time-block").each(function () {
+    // This extracts the hour value from the id attribute of each .time-block element.
+    var hourBlock = parseInt($(this).attr("id").split("-")[1]);
+
+    // Based on the current time, it adds a class (past, present, or future) to each time block to visually indicate if it's in the past, present, or future.
+    if (hourBlock < currentHour) {
       $(this).addClass("past");
-    } else if (blockHour === currentHour) {
+    } else if (hourBlock === currentHour) {
       $(this).addClass("present");
     } else {
       $(this).addClass("future");
     }
   });
-  // Sets the text area text to the previous memo by pulling from local storage.
-  $(".time-block").each(function () {
-    var idSpecificHr = $(this).attr("id");
-    var storedInput = localStorage.getItem(idSpecificHr);
 
-    $(this).find("textarea").val(storedInput);
+  //  This iterates over each .time-block element again to retrieve and display any previously stored input from localStorage in the corresponding textarea.
+  $(".time-block").each(function () {
+    var timeSpecific = $(this).attr("id");
+    var savedText = localStorage.getItem(timeSpecific);
+
+    
+  $(this).find("textarea").val(savedText);
   });
-  // Deletes all keys in local storage and set the text value of the time blocks to blank.
+
+  //This attaches a click event listener to the element with the id #clearBtn (presumably a clear button). When clicked, it clears the localStorage and sets all text areas to blank.Deletes all keys in local storage and set the text value of the time blocks to blank.
   $("#clearBtn").on("click", function () {
     localStorage.clear();
     $("textarea").val("");
   });
+
+  //  This retrieves the current date using the dayjs() library and formats it as "Month Day, Year".
   var currentDate = dayjs().format("MMMM DD, YYYY");
+  //  This sets the text content of the element with the id #currentDay to display the current date.
   $("#currentDay").text(currentDate);
 });
