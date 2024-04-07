@@ -1,21 +1,26 @@
-# 05 Third-Party APIs: Work Day Scheduler
+# Daily Planner
 
-## Your Task
 
-Create a simple calendar application that allows a user to save events for each hour of a typical working day (9am&ndash;5pm) by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
+## PURPOSE 
+
+Ever felt the need to better organize your daily schedule is ran. Appoints, errands, and other time-restricted responsibilities. This application does exactly that using the [Day.js](https://day.js.org/en/) library to work with date and time.
+
 
 ## User Story
 
 ```md
-AS AN employee with a busy schedule
+AS AN INDIVDUAL with a busy schedule
 I WANT to add important events to a daily planner
 SO THAT I can manage my time effectively
 ```
 
+
 ## Acceptance Criteria
 
+Here are the critical requirements necessary to develop a portfolio that satisfies a typical hiring manager’s needs:
+
+```
 ```md
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
@@ -31,125 +36,17 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
-
-The following animation demonstrates the application functionality:
-
-<!-- @TODO: create ticket to review/update image) -->
-![A user clicks on slots on the color-coded calendar and edits the events.](05-third-party-apis-homework-demo.gif)
-
-## Grading Requirements
-
-> **Note**: If a Challenge assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
-
-This Challenge is graded based on the following criteria:
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * Uses a date utility library to work with date and time
-
-### Deployment: 32%
-
-* Application deployed at live URL
-
-* Application loads with no errors
-
-* Application GitHub URL submitted
-
-* GitHub repo contains application code
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate
-
-* Application user interface style is clean and polished
-
-* Application resembles the mock-up functionality provided in the Challenge instructions
-
-### Repository Quality: 13%
-
-* Repository has a unique name
-
-* Repository follows best practices for file structure and naming conventions
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages
-
-* Repository contains quality README file with description, screenshot, and link to deployed application
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application
-
-* The URL of the GitHub repository, with a unique name and a README describing the project
-
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
-
-
-
-
-# Daily Planner
-
-## PURPOSE 
-
-This webpage displays my portfolio, and it is divided into three different sections which are About Me, Work, and Contact Me. Here employers can view more indepth information about myself.
-
-
-## User Story
-
-```
-AS A JOB SEEKER
-I WANT to show a potential EMPLOYER a deployed portfolio of work samples
-SO THAT the EMPLOYER can review samples of my work and assess whether I am a good candidate for an open position.
-```
-
-
-## Acceptance Criteria
-
-Here are the critical requirements necessary to develop a portfolio that satisfies a typical hiring manager’s needs:
-
-```
-GIVEN I need to show a potential Employer previous work
-WHEN my portfollio loads
-THEN my name is presented and a recent photo of my repo, and links to sections about me, my work, and how to contact me
-WHEN one of the links in the navigation is clicked
-THEN the UI scrolls to the corresponding section
-WHEN the link to the section about my work is clicked 
-THEN the UI scrolls to a section with titled images of the my Github repoistory
-WHEN the scroll to the first image of my project (Github repoistory) 
-THEN that project image should be larger in size than the others
-WHEN clicking on the images of the project (applications)
-THEN the webpage is taken to that deployed project (application)
-WHEN resizing the page or view the site on various screens and devices
-THEN what is presented is a responsive layout that adapts to my viewport
-```
 ### Wireframe
 
 ![Wireframe](./Assets/Images/Wireframe.jpg)
 
-### Screenshot
-
-![Screenshot](./Assets/Images/Webpage-Screenshot.png)
-
-### Contact Links
+### Gif
 
 ```
-* Github - Repository contains quality readme with description, screenshot, link to deployed application.
-*Twitter
-* Resume - with Employment history and certification
+The following animation demonstrates the application functionality:
+
+<!-- @TODO: create ticket to review/update image) -->
+![A user clicks on slots on the color-coded calendar and edits the events.](05-third-party-apis-homework-demo.gif)
 ```
 
 
